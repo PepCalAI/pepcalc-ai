@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pepcalc-ai"
+version = "0.1.0"
+description = "Tiny unit-conversion helpers for reconstitution math: mg/mL concentration, volume to draw and U-100 syringe units. Educational information only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "PepCalc AI" }]
+keywords = ["calculator", "concentration", "mg-per-ml", "syringe-units", "u-100", "peptide-calculator", "reconstitution"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Education",
+  "Topic :: Education",
+]
+
+[project.urls]
+Homepage = "https://pepcalc.ai"
+Source = "https://github.com/PepCalAI/pepcalc-ai"
+
+[project.scripts]
+pepcalc-ai = "pepcalc_ai:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
